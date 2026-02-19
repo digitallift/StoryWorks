@@ -152,7 +152,19 @@ export default function ServicesSection() {
   return (
     <Box sx={{ backgroundColor: darkBg }}>
       {/* ================= MARKETPLACE SECTION ================= */}
-      <Box sx={{ backgroundColor: darkBg, py: 8, px: 40 }}>
+      <Box
+        sx={{
+          backgroundColor: darkBg,
+          py: { xs: 8, md: 4 },
+          px: {
+            xs: 2, // mobile (small padding)
+            sm: 4, // 80px
+            md: 4, // 160px
+            lg: 20, // 320px (desktop large)
+            xl: 40,
+          },
+        }}
+      >
         {" "}
         {/* Heading */}{" "}
         <Typography
@@ -165,28 +177,26 @@ export default function ServicesSection() {
           Story Works <span style={{ color: gold }}>Studio Services</span>{" "}
         </Typography>{" "}
         {servicesData.map((section, index) => (
-          <Grid key={index} mb={6} px={9}>
+          <Grid key={index} mb={4} sx={{ px: { xs: 0, sm: 2, md: 4 } }}>
             {" "}
             <Typography
               variant="h6"
-              sx={{ color: gold, mb: 3, fontWeight: 500 }}
+              sx={{ color: gold, mb: 2, fontWeight: 500 }}
             >
               {" "}
               {section.category}{" "}
             </Typography>{" "}
             <Grid container spacing={3} justifyContent="start">
-              {" "}
               {section.items.map((service, i) => (
                 <Grid size={{ xs: 12, sm: 6, md: 4, lg: 3 }} key={i}>
-                  {" "}
-                  <ServiceCard icon={service.icon} title={service.title} />{" "}
+                  <ServiceCard icon={service.icon} title={service.title} />
                 </Grid>
-              ))}{" "}
-            </Grid>{" "}
+              ))}
+            </Grid>
           </Grid>
         ))}{" "}
       </Box>
-      <Box sx={{ py: 10, textAlign: "center" }}>
+      <Box sx={{ py: 10, textAlign: "center", background: "#070F1C" }}>
         <Container maxWidth="lg">
           <Typography variant="caption" sx={{ color: gold, letterSpacing: 2 }}>
             MARKETPLACE
@@ -194,7 +204,11 @@ export default function ServicesSection() {
 
           <Typography
             variant="h3"
-            sx={{ color: "#fff", fontWeight: 700, mt: 2 }}
+            sx={{
+              color: "#fff",
+              fontWeight: 700,
+              mt: 2,
+            }}
           >
             Creator <span style={{ color: gold }}>Marketplace</span>
           </Typography>
