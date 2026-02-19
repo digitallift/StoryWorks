@@ -1,6 +1,6 @@
-import { useNavigate } from "react-router-dom"
+import { Link, useNavigate } from "react-router-dom"
 import logo from "../assets/logo.png"
-import {navlinks} from "../contant/links.js"
+import {navlinks} from "../contant/links.jsx"
 import { useState } from "react";
 import { RxHamburgerMenu } from "react-icons/rx";
 import { RxCross2 } from "react-icons/rx";
@@ -10,6 +10,7 @@ const Navbar = () => {
   const navigation = useNavigate();
 
   const [isopen,SetIsopen] = useState(false);
+  const [selected,SetSelected] = useState("Home");
  
  return (
     <div className="fixed left-0 z-50 w-full">
@@ -21,9 +22,9 @@ const Navbar = () => {
             <div className="hidden md:flex flex-row items-center space-x-5 font-light text-base">
                 {
                   navlinks.map((item,index)=>(
-                  <a href={item.link} key={index} className="text-gray-400 hover:text-[#DE8617]">
+                  <Link onClick={()=>SetSelected(item.name)} to={item.link} key={index} className={` hover:text-[#DE8617] ${selected === item.name ? "text-[#DE8617]" : "text-gray-400"}`}>
                       {item.name}
-                  </a>
+                  </Link>
                 ))
                 }
                 <button onClick={()=>navigation("/login")} className="bg-[#DE8617] rounded-lg cursor-pointer px-2 py-1 font-medium">+ Sign Up / Log In</button>
@@ -41,7 +42,7 @@ const Navbar = () => {
               (<div className="px-3 space-y-5  transform-all duration-500 ease-in-out  flex flex-col items-center text-center bg-[#091323]  py-5">
                  {
                   navlinks.map((item,index)=>(
-                  <a href={item.link} key={index} className="text-gray-400 hover:text-[#DE8617]">
+                  <a onClick={()=>SetIsopen(false)} href={item.link} key={index} className="text-gray-400 hover:text-[#DE8617]">
                       {item.name}
                   </a>))
                  }
