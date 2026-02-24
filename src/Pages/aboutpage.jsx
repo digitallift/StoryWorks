@@ -1,10 +1,12 @@
-import React from 'react'
+
 
 const aboutpage = () => {
   return (
-    <div>
-      
-    </div>
+          <>
+            <section className="w-full bg-">
+
+            </section>
+          </>
   )
 }
 
