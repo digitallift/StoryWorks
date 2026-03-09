@@ -1,4 +1,3 @@
-import React from "react";
 import { Box, Typography, Container, Grid } from "@mui/material";
 import MovieCreationIcon from "@mui/icons-material/MovieCreation";
 import { Paper } from "@mui/material";
@@ -56,6 +55,7 @@ const aboutpage = () => {
           >
             OUR VISION
           </Typography>
+
 
           {/* Main Heading */}
           <Typography
