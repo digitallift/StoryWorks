@@ -2,9 +2,9 @@ import React from "react";
 
 const LoginPage = () => {
   return (
-    <div className="min-h-screen flex bg-black text-white">
+    <div className="bg-[#091323] min-h-screen flex bg-black text-white">
       {/* Left Section */}
-      <div className="hidden md:flex w-1/2 items-center justify-center bg-gradient-to-r from-black via-gray-900 to-black">
+      <div className="hidden md:flex bg-[#091323] w-1/2 items-center justify-center">
         <div className="text-center max-w-md px-6">
           <div className="flex justify-center mb-6">
             <div className="border border-orange-500 p-3 rounded-md">
@@ -12,7 +12,7 @@ const LoginPage = () => {
             </div>
           </div>
 
-          <h1 className="text-4xl font-bold">
+          <h1 className="text-6xl font-bold">
             Hire Top <span className="text-orange-500">Creators</span>
           </h1>
 
@@ -24,26 +24,26 @@ const LoginPage = () => {
           <div className="flex justify-center gap-10 mt-10 text-center">
             <div>
               <h3 className="text-orange-500 font-semibold">1K+</h3>
-              <p className="text-sm text-gray-400">Creators</p>
+              <p className="text-md text-gray-400">Creators</p>
             </div>
 
             <div>
               <h3 className="text-orange-500 font-semibold">Fast</h3>
-              <p className="text-sm text-gray-400">Hiring</p>
+              <p className="text-md text-gray-400">Hiring</p>
             </div>
 
             <div>
               <h3 className="text-orange-500 font-semibold">Project</h3>
-              <p className="text-sm text-gray-400">Tools</p>
+              <p className="text-md text-gray-400">Tools</p>
             </div>
           </div>
         </div>
       </div>
 
       {/* Right Section */}
-      <div className="flex w-full md:w-1/2 items-center justify-center px-6">
-        <div className="w-full max-w-md">
-          <p className="text-orange-400 text-sm mb-2">Business Account</p>
+      <div className="bg-[#091323] flex w-full md:w-1/2 items-center justify-center px-6">
+        <div className="w-full max-w-xl ">
+          <p className="text-orange-400 text-md mb-2">Business Account</p>
 
           <h2 className="text-3xl font-semibold mb-2">Welcome back</h2>
           <p className="text-gray-400 mb-6">Sign in to manage your projects</p>
