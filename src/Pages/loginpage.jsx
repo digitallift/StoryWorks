@@ -2,7 +2,7 @@ import React from "react";
 
 const LoginPage = () => {
   return (
-    <div className="bg-[#091323] min-h-screen flex bg-black text-white">
+    <div className="bg-[#091323] min-h-screen pt-19 flex bg-black text-white">
       {/* Left Section */}
       <div className="hidden md:flex bg-[#091323] w-1/2 items-center justify-center">
         <div className="text-center max-w-md px-6">
@@ -41,7 +41,7 @@ const LoginPage = () => {
       </div>
 
       {/* Right Section */}
-      <div className="bg-[#091323] flex w-full md:w-1/2 items-center justify-center px-6">
+      <div className="bg-[#091323] flex w-full md:w-1/2 py-5 items-center justify-center px-6">
         <div className="w-full max-w-xl ">
           <p className="text-orange-400 text-md mb-2">Business Account</p>
 
